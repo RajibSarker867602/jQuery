@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore jQuery</title>
+    <script src="assets/js/jquery.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <button id="clickMe">Click Me</button>
+
+    <div id="styleDiv" style="height: 100px; width: 100px;"></div>
+
+    <br>
+    <hr>
+
+    <table id="table1" border="1">
+        <tr>
+            <td>A</td>
+            <td>B</td>
+            <td>C</td>
+            <td>D</td>
+            <td>E</td>
+        </tr>
+        <tr>
+            <td>F</td>
+            <td>G</td>
+            <td>H</td>
+            <td>I/J</td>
+            <td>K</td>
+
+        </tr>
+        <tr>
+            <td>L</td>
+            <td>M</td>
+            <td>N</td>
+            <td>O</td>
+            <td>P</td>
+        </tr>
+        <tr>
+            <td>Q</td>
+            <td>R</td>
+            <td>S</td>
+            <td>T</td>
+            <td>U</td>
+        </tr>
+        <tr>
+
+            <td>V</td>
+            <td>W</td>
+            <td>X</td>
+            <td>Y</td>
+            <td>Z</td>
+        </tr>
+    </table>
+
+    <hr>
+    <div title="title1">
+        Title 1
+    </div>
+
+    <div title="title2">
+        Title 2
+    </div>
+
+    <span title="2">
+        Title 3
+    </span>
+
+    <hr>
+    <input type="text" value="Rajib">
+    <input type="text" value="Sarker">
+    <br>
+    <input type="checkbox" checked="checked" value="C#">
+    <input type="checkbox" checked="checked" value=".Net Core">
+    <input type="checkbox" value="Php">
+    <br>
+    <input type="radio" name="gender" checked="checked" value="Male">
+    <input type="radio" name="gender" value="Female">
+    <br>
+    <select>
+        <option selected value="BD">BD</option>
+        <option value="BD1">BD1</option>
+        <option value="BD2">BD2</option>
+        <option value="BD3">BD3</option>
+    </select>
+    <br>
+    <textarea>I'm a software engineer with more than 4 years experience.</textarea>
+    <br>
+    <input type="submit" value="Submit">
+
+</body>
+
+<script>
+    $(document).ready(function () {
+        // alert('Welcome to jQuery world...');
+
+        // btn click
+        $('#clickMe').click(function () {
+            $('#styleDiv').css('background', 'green');
+        });
+
+        // table design
+        $('#table1 tr:even').css('background', 'green');
+        $('#table1 tr:odd').css('background', 'blue');
+
+        // attributes selector
+        // $('[title]').css('background', 'red');
+        // $('div[title]').css('background', 'red');
+        $('div[title="title1"]').css('background', 'red');
+
+
+        // input/:input
+        // $('input').each(function(){
+        //     alert($(this).val());
+        // })
+
+        $(':input').each(function(){
+            alert($(this).val());
+        })
+    })
+</script>
+</html>
